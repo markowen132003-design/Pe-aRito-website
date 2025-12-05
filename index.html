@@ -1,34 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
     <style>
         @font-face {
-    font-family: FinalParadeSerif;
-    src: url(Fonts/BOGSTAND.TTF);
-} 
-        h1{
-            background-color: #4caf50;
+            font-family: FinalParadeSerif;
+            src: url(Fonts/BOGSTAND.TTF);
+        } 
+
+        body {
+            margin: 0;
+            background-image: url('IMGs/penaranda.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        /* ✅ Glass Header */
+        .glass-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+
+            background: rgba(76, 175, 80, 0.35);  /* transparent green */
+            backdrop-filter: blur(10px);         /* glass blur */
+            -webkit-backdrop-filter: blur(10px);
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 100px;
+            font-family: FinalParadeSerif;
             color: white;
         }
-        body{
-            background-image: url('IMGs/penaranda.webp');
-background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-        }
-        .EnterBTN{
-            top:3px;
-        }
-        
-    </style>
-    <head>
-        <title>Login</title>
-    </head>
-    <body>
-        <center>
-          <h1 class="center-title" style="font-size: 100px; font-family: FinalParadeSerif;">PeñaRito</h1>
-        <a href="MainPage.html"><button id="EnterBTN"style ="width: 100px; height: 50px; border-radius: 10px; background-color: #4caf50; color: white;">Enter Map</button></a>
-        </center>
-    </body>
-</html>
 
+        .EnterBTN {
+            margin-top: 15px;
+            width: 130px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgba(76, 175, 80, 0.8);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .EnterBTN:hover {
+            background-color: rgba(56, 142, 60, 0.9);
+            transform: scale(1.05);
+        }
+
+        /* ✅ Push page content so it doesn't hide under header */
+        .spacer {
+            height: 220px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ✅ Glass Header -->
+    <div class="glass-header">
+        <h1>PeñaRito</h1>
+        <a href="MainPage.html">
+            <button class="EnterBTN">Enter Map</button>
+        </a>
+    </div>
+
+    <!-- ✅ Space below header -->
+    <div class="spacer"></div>
+
+</body>
+</html>
