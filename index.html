@@ -8,79 +8,113 @@
         @font-face {
             font-family: FinalParadeSerif;
             src: url(Fonts/BOGSTAND.TTF);
-        } 
-
-        body {
-            margin: 0;
-            background-image: url('IMGs/penaranda.webp');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
-            height: 100vh;
         }
 
-        /* ✅ Glass Header */
-        .glass-header {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-image: url('IMGs/penaranda.webp');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        /* ✅ FULL GLASS OVERLAY */
+        .glass-page {
             position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 0;
-            text-align: center;
+            inset: 0;
+            background: rgba(76, 175, 80, 0.25);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
 
-            background: rgba(76, 175, 80, 0.35);  /* transparent green */
-            backdrop-filter: blur(10px);         /* glass blur */
-            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            z-index: 1000;
+            transition: transform 1.2s ease, opacity 1.2s ease;
+            z-index: 999;
+        }
+
+        /* ✅ EXIT ANIMATION */
+        .glass-page.exit {
+            transform: translateY(-100%);
+            opacity: 0;
         }
 
         h1 {
-            margin: 0;
             font-size: 100px;
             font-family: FinalParadeSerif;
             color: white;
+            margin-bottom: 30px;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.6);
         }
 
         .EnterBTN {
-            margin-top: 15px;
-            width: 130px;
-            height: 50px;
-            border-radius: 10px;
+            width: 150px;
+            height: 55px;
+            border-radius: 12px;
             border: none;
-            background-color: rgba(76, 175, 80, 0.8);
+            background-color: rgba(255, 255, 255, 0.25);
             color: white;
             font-size: 16px;
             cursor: pointer;
-            transition: 0.3s ease;
+
+            backdrop-filter: blur(8px);
+            transition: 0.4s ease;
         }
 
         .EnterBTN:hover {
-            background-color: rgba(56, 142, 60, 0.9);
-            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.08);
         }
 
-        /* ✅ Push page content so it doesn't hide under header */
-        .spacer {
-            height: 220px;
+        /* ✅ Optional startup fade animation */
+        .glass-page {
+            animation: fadeIn 1s ease;
         }
 
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(1.05);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- ✅ Glass Header -->
-    <div class="glass-header">
+    <!-- ✅ FULL GLASS PAGE -->
+    <div class="glass-page" id="glassPage">
         <h1>PeñaRito</h1>
-        <a href="MainPage.html">
-            <button class="EnterBTN">Enter Map</button>
-        </a>
+
+        <button class="EnterBTN" onclick="exitToMain()">Enter Map</button>
     </div>
 
-    <!-- ✅ Space below header -->
-    <div class="spacer"></div>
+    <script>
+        function exitToMain() {
+            const glass = document.getElementById("glassPage");
+
+            // ✅ Add exit animation
+            glass.classList.add("exit");
+
+            // ✅ Wait for animation then redirect
+            setTimeout(() => {
+                window.location.href = "MainPage.html";
+            }, 1200);
+        }
+    </script>
 
 </body>
 </html>
