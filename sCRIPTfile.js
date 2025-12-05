@@ -370,7 +370,6 @@ function openAbout() {
 }
 
 function closeAbout() {
-    document.getElementById("about-popup").style.display = "none";
     const popup = document.getElementById("about-popup");
     const content = document.getElementById("about-content");
 
@@ -383,5 +382,6 @@ function closeAbout() {
         content.classList.remove("closing");
     }, 350); // must match animation time
 }
+
 
 
