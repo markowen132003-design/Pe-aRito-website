@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEñaRito: Peñaranda Tourist Spot</title>
+
+    <link rel="stylesheet" href="CSScode.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<header>
+    <img src="IMGs/logo2.png" alt="Peñaranda Logo" class="logo">
+
+    <h1 class="center-title" style="font-size: 45px; font-family: FinalParadeSerif;">PeñaRito</h1>
+
+    <div class="header-right">
+        <button onclick="toggleNav()" class="nav-toggle">☰</button>
+    </div>
+</header>
+
+<div id="side-nav" class="side-nav">
+    
+    <a href="#landmarks-list" onclick="viewlist()">Landmark List</a>
+    <a href="javascript:void(0)" onclick="openAbout()">About</a>
+    <!--<a href="#footer">Contact</a>-->
+    <a href="javascript:void(0)" class="" onclick="toggleNav()">Exit</a><!--&times means x;-->
+</div>
+
+
+<div id="land-List" class="land-List">
+    <div id="landmarks-list">
+          <button id="close-landlist" style="float: right; border: none; background: transparent; font-size: 20px; cursor: pointer;">&times;</button>
+        
+        <h2>Lists</h2>
+        <ul id="landmarks">
+            
+        </ul>
+    </div>
+</div>
+
+<!-- NEW WRAPPER for flex layout -->
+<div class="main-container">
+  <!-- Map container -->
+  <div class="map-container">
+    <div id="map"></div>
+
+    <button onclick="requestLocation()" class="locate-btn-map">Locate Me</button>
+    <button onclick="returnToPenaranda()" id="return-map" class="return-btn-map">RESET</button>
+</div>
+
+  <!-- Right side card/ Landmark description(hidden initially) -->
+  <div id="right-card" class="right-card"></div>
+  <!--aBOUT PopUp-->
+<div id="about-popup">
+    <div id="about-content">
+        <button id="close-about" onclick="closeAbout()">&times;</button>
+        <iframe src="aboutBTN.html"></iframe>
+    </div>
+</div>
+</div>
+
+
+<footer id="footer">
+    <p>Peñaranda Tourism. All rights reserved. | Contact No: 09652393981</p>
+</footer>
+
+<script src="sCRIPTfile.js"></script>
+</body>
+</html>
