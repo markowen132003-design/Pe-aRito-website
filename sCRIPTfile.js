@@ -86,7 +86,7 @@ const landmarks = [
         lat: 15.351572, 
         lng: 121.003094, 
         icon: icons.food, 
-        image: ["IMGs/foodmarket.jpg","IMGs/foodMark2.jpg","IMGs/foodMark1.jpg","IMGs/foodMark3.jpg","IMGs/foodMark5.jpg",],
+        image: ["IMGs/FoodMARKET.jpg","IMGs/foodMark2.jpg","IMGs/foodMark1.jpg","IMGs/foodMark3.jpg","IMGs/foodMark5.jpg",],
         description: "It is a Food Market filled with various street foods like Kwek-kwek, Fishball, Takoyaki, Milktea, Fries, Burger, and Beef Pares where many Novo Ecijanos gather to devour. An All-you-can-EAT-Area.",
         history: "According to the “Brief Profile of Peñaranda” from the local government, the Peñaranda Public Market is located in Barangay Poblacion I. The profile does not provide detailed information about the exact date the market was established, but it is part of the town’s main commercial activity.",
     },
@@ -104,7 +104,7 @@ const landmarks = [
         lat: 15.350528, 
         lng: 121.005364, 
         icon: icons.food, 
-        image: ["IMGs/awaps.jpg","IMGs/awapPic1.jpg","IMGs/awapsisig.jpg","IMGs/awapPic3.jpg","IMGs/awapPic2.jpg","IMGs/awap_Pic5.jpg",],
+        image: ["IMGs/AWAPS.jpg","IMGs/awapPic1.jpg","IMGs/awapsisig.jpg","IMGs/awapPic3.jpg","IMGs/awapPic2.jpg","IMGs/awap_Pic5.jpg",],
         description: "Awap’s Ihawan at Sizzlingan is a grill / sizzling-style restaurant. It is to be a popular “ihawan / sizzling” joint in town — a place where grilled meats and sizzling dishes (likely sisig and other Filipino grill specialties) are served. On its social media page, they highlight “crispy sizzling sisig” as one of their signature offerings.",
         history: "Awap’s is a relatively recent local business, operating for about seven years. It is not a long-established or heritage restaurant, but rather a small-to-medium eatery typical of many Filipino towns, known and supported mainly through community word-of-mouth rather than any formal historical record."
     },
@@ -112,7 +112,7 @@ const landmarks = [
         title: "San Agustin Parish Church", 
         lat: 15.353610, lng: 121.001982,
         icon: icons.church, 
-        image: ["IMGs/FvfPenarandaNEChurch.jpg","IMGs/church inside 2.jpg","IMGs/churchside.JPG","IMGs/ChurchIn2.jpg","IMGs/Old Church.jpg",],
+        image: ["IMGs/FvfPenarandaNEChurch.JPG","IMGs/church inside 2.jpg","IMGs/churchside.JPG","IMGs/ChurchIn2.JPG","IMGs/Old Church.jpg",],
         description: "The San Agustin Parish Church is the main Catholic church in Peñaranda and the center of many religious festivities.",
         history: "Built during the Spanish colonial period, the church has undergone numerous restorations. Its structure reflects Spanish-era architectural influences. It has long been a spiritual landmark for Peñarandeños and remains active in community religious life.",
     },
@@ -371,4 +371,5 @@ function openAbout() {
 
 function closeAbout() {
     document.getElementById("about-popup").style.display = "none";
+
 }
