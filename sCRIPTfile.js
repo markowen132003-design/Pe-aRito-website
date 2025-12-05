@@ -371,5 +371,17 @@ function openAbout() {
 
 function closeAbout() {
     document.getElementById("about-popup").style.display = "none";
+    const popup = document.getElementById("about-popup");
+    const content = document.getElementById("about-content");
 
+    // ✅ Add closing animation
+    content.classList.add("closing");
+
+    // ✅ Wait for animation before hiding
+    setTimeout(() => {
+        popup.style.display = "none";
+        content.classList.remove("closing");
+    }, 350); // must match animation time
 }
+
+
