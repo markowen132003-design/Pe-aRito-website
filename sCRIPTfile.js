@@ -109,11 +109,11 @@ const landmarks = [
         history: "Awap’s is a relatively recent local business, operating for about seven years. It is not a long-established or heritage restaurant, but rather a small-to-medium eatery typical of many Filipino towns, known and supported mainly through community word-of-mouth rather than any formal historical record."
     },
     { 
-        title: "San Agustin Parish Church", 
+        title: "Saint Francis of de Assisi Parish Church", 
         lat: 15.353610, lng: 121.001982,
         icon: icons.church, 
         image: ["IMGs/FvfPenarandaNEChurch.JPG","IMGs/church inside 2.jpg","IMGs/churchside.JPG","IMGs/ChurchIn2.JPG","IMGs/Old Church.jpg",],
-        description: "The San Agustin Parish Church is the main Catholic church in Peñaranda and the center of many religious festivities.",
+        description: "The Saint Francis of de Assisi Parish Church is the main Catholic church in Peñaranda and the center of many religious festivities.",
         history: "Built during the Spanish colonial period, the church has undergone numerous restorations. Its structure reflects Spanish-era architectural influences. It has long been a spiritual landmark for Peñarandeños and remains active in community religious life.",
     },
     { 
@@ -382,6 +382,7 @@ function closeAbout() {
         content.classList.remove("closing");
     }, 350); // must match animation time
 }
+
 
 
 
