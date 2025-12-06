@@ -59,7 +59,7 @@ main {
 
 .main-container {
     display: flex;
-    height: 78%; /* match your existing map height */
+    height: 79%; /* match your existing map height */
     width: 100%;
     
     /* no overflow-x */
@@ -340,6 +340,7 @@ footer {
     to { opacity: 1; transform: scale(1); }
 
 }
+
 
 
 
